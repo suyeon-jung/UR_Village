@@ -71,3 +71,5 @@ $ npm start
 
 ## 📎 License
 [MIT LICESNE](http://khuhub.khu.ac.kr/zuzitsu/UR_Village/blob/master/LICENSE)
+
+### **[KHUHUB-original repository](http://khuhub.khu.ac.kr/zuzitsu/UR_Village)** 
