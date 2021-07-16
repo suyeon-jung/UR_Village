@@ -1,0 +1,24 @@
+<h4>🎬 영화관 현황</h4>
+<table class="table">
+    <thead class="thead-dark">
+        <th>사업장명</th>
+        <th>도로명주소</th>
+    </thead>
+    <tbody>
+        <%for (var i =0; i <movies.length; i++){%>
+            <tr>
+                <td>
+                    <%=movies[i].BIZPLC_NM%>
+                </td>
+                <td>
+                    <%=movies[i].REFINE_ROADNM_ADDR%>
+                </td>
+            </tr>
+            <%}%>
+    </tbody>
+</table>
+
+
+<p class = "sum">총 영화관 개수 :
+    <%=movies.length%>
+</p>

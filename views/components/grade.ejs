@@ -1,0 +1,19 @@
+<%if(grade == 'A'){%>
+    <div class="alert alert-primary" role="alert">
+        <h3>평가 등급 :
+            <%=grade%>
+        </h3>
+    </div>
+    <%} else if(grade == 'B'){%>
+        <div class="alert alert-warning" role="alert">
+            <h3>평가 등급 :
+                <%=grade%>
+            </h3>
+        </div>
+        <%} else{%>
+            <div class="alert alert-danger" role="alert">
+                <h3>평가 등급 :
+                    <%=grade%>
+                </h3>
+            </div>
+            <%}%>

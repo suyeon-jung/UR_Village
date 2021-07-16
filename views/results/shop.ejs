@@ -1,0 +1,31 @@
+<h4>🛍 시장 및 마트 현황</h4>
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>시장명</th>
+            <th>도로명주소</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%for (var i =0; i <shops.length; i++){%>
+            <tr>
+                <td>
+                    <%=shops[i].MARKET_NM%>
+
+                </td>
+                <td>
+                    <%=shops[i].REFINE_ROADNM_ADDR%>
+                </td>
+            </tr>
+            <%}%>
+    </tbody>
+
+</table>
+
+
+
+<p class="sum">총 시장 및 마트 개수 :
+    <%=shops.length%>
+</p>

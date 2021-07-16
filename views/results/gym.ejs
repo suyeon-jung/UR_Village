@@ -1,0 +1,35 @@
+<h4>🏋️‍♂️ 운동시설 현황</h4>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                사업장명
+            </th>
+            <th>전화번호</th>
+            <th>도로명주소</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%for (var i =0; i <gyms.length; i++){%>
+            <tr>
+                <td>
+                    <%=gyms[i].BIZPLC_NM%>
+                </td>
+                <td>
+                    <%=gyms[i].LOCPLC_FACLT_TELNO%>
+                </td>
+                <td>
+                    <%=gyms[i].REFINE_ROADNM_ADDR%>
+                </td>
+
+            </tr>
+            <%}%>
+    </tbody>
+</table>
+
+
+
+<p class = "sum">총 운동시설 개수 :
+    <%=gyms.length%>
+</p>

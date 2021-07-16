@@ -1,0 +1,28 @@
+.card-body {
+    text-align: center;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.category {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.card-title {
+    font-size: medium;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: small;
+}
+
+.btn {
+    font-weight: bold;
+    font-size: x-small;
+}

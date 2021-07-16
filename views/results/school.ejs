@@ -1,0 +1,72 @@
+<h4>📚 도서관 현황</h4>
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>도서관명</th>
+            <th>도로명주소</th>
+            <th>자료실 개방시간</th>
+            <th>열람실 개방시간</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <%for (var i =0; i <librarys.length; i++){%>
+            <tr>
+                <td>
+                    <%=librarys[i].LIBRRY_NM%>
+                </td>
+                <td>
+                    <%=librarys[i].REFINE_ROADNM_ADDR%>
+                </td>
+                <td>
+                    <%=librarys[i].RECSROOM_OPEN_TM_INFO%>
+                </td>
+                <td>
+                    <%=librarys[i].READROOM_OPEN_TM_INFO%>
+                </td>
+            </tr>
+            <%}%>
+    </tbody>
+</table>
+
+<hr class="divide">
+
+
+
+<h4>📒 학원 현황 </h4>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>시설명</th>
+            <th>교습과정명</th>
+            <th>도로명주소</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <%for (var i =0; i <institutes.length; i++){%>
+            <tr>
+                <td>
+                    <%=institutes[i].FACLT_NM%>
+                </td>
+                <td>
+                    <%=institutes[i].CRSE_CLASS_NM%>
+                </td>
+                <td>
+                    <%=institutes[i].REFINE_ROADNM_ADDR%>
+                </td>
+            </tr>
+            <%}%>
+    </tbody>
+</table>
+
+<p class="sum">총 도서관 개수 :
+    <%=librarys.length%>
+</p>
+
+<p class="sum">학원 및 교습소 개수 :
+    <%=institutes.length%>
+</p>

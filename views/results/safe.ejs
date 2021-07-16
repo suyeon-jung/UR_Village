@@ -1,0 +1,46 @@
+<h4>📷 CCTV 현황</h4>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>도로명주소</th>
+            <th>카메라대수</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%for (var i =0; i <cctvs.length; i++){%>
+            <tr>
+                <td>
+                    <%=cctvs[i].REFINE_LOTNO_ADDR%>
+                </td>
+                <td>
+                    <%=cctvs[i].CAMERA_CNT%>
+                </td>
+            </tr>
+            <%}%>
+    </tbody>
+</table>
+
+<hr class="divide">
+
+<h4>💡 보안등 현황</h4>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>도로명주소</th>
+            <th>설치개수</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%for (var i =0; i <lights.length; i++){%>
+            <tr>
+                <td>
+                    <%=lights[i].REFINE_LOTNO_ADDR%>
+                </td>
+                <td>
+                    <%=lights[i].INSTL_CNT	%>
+                </td>
+            </tr>
+            <%}%>
+    </tbody>
+</table>

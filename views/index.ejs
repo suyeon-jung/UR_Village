@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <%- include('components/header') -%>
+        <script>
+            function validate() {
+                // 필수 입력자 확인
+                let sigun = document.getElementById("sigun").value;
+                let dong = document.getElementById("dong").value;
+                if (!sigun || !dong) {
+                    alert("주소를 입력해주세요(시/군, 동 필수)");
+                    document.getElementById("sigun").focus();
+                } else {
+                    document.getElementById("location").submit();
+                }
+
+            }
+        </script>
+</head>
+
+
+<body>
+    <div class="indexpage">
+
+
+        <form action="/category" method="post" name="location" id="location">
+            <div class="card mx-auto mb-2" style="width : 100%;">
+
+                <img class="gyeonggi" src="/img/logo.png" style="margin :30px">
+                <div class="d-flex align-items-center">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">당신이 조사하고 싶은 동네의 주소를 입력하세요!</h5><br>
+                        <p>* 경기도 내 동네만을 입력해주세요</p><br>
+                        <input type="text" class="form-control" id="sigun" name="sigun" placeholder="시/군을 입력하세요"><br>
+                        <input type="text" class="form-control" id="gu" name="gu" placeholder="구를 입력하세요"><br>
+                        <input type="text" class="form-control" id="dong" name="dong" placeholder="읍/면/동을 입력하세요"><br>
+                        <button type="button" onclick="validate()" class="btn btn-warning">검색</button><br>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+
+
+</html>

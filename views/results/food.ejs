@@ -1,0 +1,62 @@
+<h4>
+    🥘 맛집 현황</h4>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>음식점명</th>
+            <th>전화번호</th>
+            <th>대표음식</th>
+            <th>도로명주소</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%for (var i =0; i <stores.length; i++){%>
+            <tr>
+                <td>
+                    <%=stores[i].RESTRT_NM%>
+                </td>
+                <td>
+                    <%=stores[i].TASTFDPLC_TELNO%>
+                </td>
+                <td>
+                    <%=stores[i].REPRSNT_FOOD_NM%>
+                </td>
+                <td>
+                    <%=stores[i].REFINE_ROADNM_ADDR%>
+                </td>
+            </tr>
+            <%}%>
+    </tbody>
+</table>
+
+<hr class="divide">
+
+
+<h4>🍔 패스트푸드점 현황 </h4>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>사업장명</th>
+            <th>도로명주소</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%for (var i =0; i <fast_food_stores.length; i++){%>
+            <tr>
+                <td>
+                    <%=fast_food_stores[i].BIZPLC_NM%>
+                </td>
+                <td>
+                    <%=fast_food_stores[i].REFINE_ROADNM_ADDR%>
+                </td>
+            </tr>
+            <%}%>
+    </tbody>
+</table>
+<p class="sum">총 맛집 개수 :
+    <%=stores.length%>
+</p>
+<p class="sum">패스트푸드점 개수 :
+    <%=fast_food_stores.length%>
+</p>

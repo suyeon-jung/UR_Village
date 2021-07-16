@@ -1,0 +1,25 @@
+<h4>🌳 도시공원 현황</h4>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>도시공원명</th>
+            <th>도로명주소</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%for (var i =0; i <city_parks.length; i++){%>
+            <tr>
+                <td>
+                    <%=city_parks[i].PARK_NM%>
+                </td>
+                <td>
+                    <%=city_parks[i].REFINE_ROADNM_ADDR%>
+                </td>
+            </tr>
+            <%}%>
+    </tbody>
+
+</table>
+<p class = "sum">총 도시공원 개수 :
+    <%=city_parks.length%>
+</p>

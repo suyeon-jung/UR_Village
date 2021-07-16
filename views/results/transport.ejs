@@ -1,0 +1,59 @@
+<h4>🚌 버스 현황</h4>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>버스정류장명</th>
+            <th>버스정류장ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%for (var i =0; i <busStations.length; i++){%>
+            <tr>
+                <td>
+                    <%=busStations[i].stationName%>역
+                </td>
+                <td>
+                    <%=busStations[i].stationID%>
+                </td>
+            </tr>
+            <%}%>
+    </tbody>
+</table>
+
+
+
+<hr class="divide">
+
+<h4>🚆 지하철역 현황</h4>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>지하철역명</th>
+            <th>지하철역ID</th>
+            <th>지하철호선</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%for (var i =0; i <subwayStations.length; i++){%>
+            <tr>
+                <td>
+                    <%=subwayStations[i].stationName%>역
+                </td>
+                <td>
+                    <%=subwayStations[i].stationID%>
+                </td>
+                <td>
+                    <%=subwayStations[i].laneName%>
+                </td>
+            </tr>
+            <%}%>
+    </tbody>
+</table>
+<p class="sum">총 버스정류장 개수 :
+    <%=busStations.length%>
+</p>
+<p class="sum">총 지하철역 개수 :
+    <%=subwayStations.length%>
+</p>
